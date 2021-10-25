@@ -10,6 +10,7 @@ export default function List({ places, childClicked, isLoading, type, setType, r
   useEffect(() => {
     const refs = Array(places?.length).fill().map((_, ind) => elRefs[ind] || createRef());
     setElRefs(refs);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [places]);
 
   return (
